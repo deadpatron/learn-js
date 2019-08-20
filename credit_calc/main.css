@@ -1,0 +1,4 @@
+.output { font-weight: bold; } /* Жир­ный шрифт для вы­чис­лен­ных зна­че­ний */
+#payment { text-decoration: underline; } /* Для эле­мен­тов с id="payment" */
+#graph { border: solid black 1px; } /* Про­стая рам­ка для диа­грам­мы */
+th, td { vertical-align: top; } /* Вы­рав­ни­ва­ние в ячей­ках таб­ли­цы */

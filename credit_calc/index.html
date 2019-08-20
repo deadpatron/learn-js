@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>credit calc</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Введите дату начала кредита</th>
+            <td></td>
+            <th>Кредитный баланс, накопленный капитал и процентные платежи</th>
+        </tr>
+        <tr>
+            <td>Сумма кредита ($):</td>
+            <td><input id="amount" onchange="calculate();"></td>
+            <td rowspan=8>
+
+            <canvas id="graph" width="400" height="250"></canvas></td>
+        </tr>
+        <tr>
+            <td>Годовой процент (%):</td>
+            <td>
+                <input id="apr" onchange="calculate();">
+            </td>
+        </tr>
+        <tr>
+            <td>Срок погашения (лет):</td>
+            <td>
+                <input id="years" onchange="calculate();">
+            </td>
+        <tr>
+            <td>Почтовый индекс (чтобы найти кредиторов):</td>
+            <td><input id="zipcode" onchange="calculate();"></td>
+        <tr>
+            <th>Приблизительные платежи:</th>
+            <td>
+                <button onclick="calculate();">Посчитать</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Ежемесячные платежи:</td>
+            <td>$
+                <span class="output" id="payment"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Всего выплачено:</td>
+            <td>$
+                <span class="output" id="total"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Общий процент:</td>
+            <td>$
+                <span class="output" id="totalinterest"></span>
+            </td>
+        </tr>
+        <tr>
+            <th>Спонсоры:</th>
+            <td colspan=2>
+                    Подать заявку на кредит с одним из этих мелких кредиторов:
+                <div id="lenders"></div>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
